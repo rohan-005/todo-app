@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login - ager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .loginbox{
+            background-color: antiquewhite;
+            height: 30vh;
+            width: 20vw;
+            text-align: center;
+            margin-top: 10%;
+            border-radius: 10px;
+            padding: 20px;
+            font-size: 30px;
+            line-height: 7vh;
+        }
+    </style>
+
+    <div class="loginbox">
+        <span>Login</span><br>
+        <input type="text"  style="width: 80%; height: 30px; border-radius: 5px;" id="username"><br>
+        <input type="password"  style="width: 80%; height: 30px; border-radius: 5px;" id="pass"><br>
+        <a href=""  style="width: 80%; height: 30px; border-radius: 5px;" onclick="checkuser()" id="login">Login</a>
+
+    </div>
+
+
+    <script>
+        const name = "frosthowl";
+        const password = "frosthowl";
+
+        function checkuser(){
+            const user = document.getElementById('username');
+            const userpass = document.getElementById('pass');
+            const log = document.getElementById('login');
+            if(user.value.trim() == name && userpass.value.trim() == password){
+                log.href = "index.html"; 
+            }
+            else{
+                alert("wrong");
+            }
+
+            
+        }
+
+    </script>
+
+    
+</body>
+</html>
